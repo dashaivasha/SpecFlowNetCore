@@ -1,17 +1,14 @@
 using NUnit.Framework;
-using OpenQA.Selenium;
-using SpecFlowNetCore.Driver;
 using SpecFlowNetCore.Pages;
 using TechTalk.SpecFlow;
 using TechTalk.SpecFlow.Assist;
 
-namespace SpecFlowNetCore
+namespace SpecFlowNetCore.Steps
 {
     [Binding]
     public sealed class LoginSteps
     {
         internal LoginPage loginPage = new LoginPage();
-        public IWebDriver WebDriver => DriverFactory.Driver;
 
         [Given(@"I enter the folowing details")]
         public void GivenIEnterTheFolowingDetails(Table table)
