@@ -7,7 +7,7 @@ namespace SpecFlowNetCore.Pages
     public class BasePage
     {
         protected IWebDriver Driver;
-        internal TestDetails Data = JsonManager.GetTestData();
+        public TestDetails Data = JsonManager.GetTestData();
 
         public BasePage()
         {

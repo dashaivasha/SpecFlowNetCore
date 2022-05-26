@@ -8,7 +8,7 @@ namespace SpecFlowNetCore.Steps
     [Binding]
     public sealed class LoginSteps
     {
-        internal LoginPage loginPage = new LoginPage();
+        public LoginPage loginPage = new LoginPage();
 
         [Given(@"I enter the folowing details")]
         public void GivenIEnterTheFolowingDetails(Table table)
