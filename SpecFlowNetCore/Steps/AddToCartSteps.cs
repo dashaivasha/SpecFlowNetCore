@@ -10,10 +10,10 @@ namespace SpecFlowNetCore
     [Binding]
     public class AddToCartSteps
     {
-        private string selectedProductName;
+        private string _selectedProductName;
         protected TestDetails Data = JsonManager.GetTestData();
-        internal HomePage homePage = new HomePage();
-        internal CartPage cartPage = new CartPage();
+        public HomePage homePage = new HomePage();
+        public CartPage cartPage = new CartPage();
         public IWebDriver WebDriver => DriverFactory.Driver;
 
         [Given(@"I click on logo")]
@@ -25,7 +25,7 @@ namespace SpecFlowNetCore
         [Given(@"I click the add to cart button")]
         public void GivenIClickTheAddToCartButton()
         {
-            selectedProductName = homePage.GetProductName();
+            _selectedProductName = homePage.GetProductName();
             homePage.AddProductToCart();
         }
 
@@ -38,7 +38,7 @@ namespace SpecFlowNetCore
         [Then(@"I should see product in the cart")]
         public void ThenIShouldSeeProductInTheCart()
         {
-            Assert.AreEqual(selectedProductName, cartPage.GetProductNameInCart());
+            Assert.AreEqual(_selectedProductName, cartPage.GetProductNameInCart());
         }
     }
 }

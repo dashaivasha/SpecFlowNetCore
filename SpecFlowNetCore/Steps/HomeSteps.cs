@@ -10,7 +10,7 @@ namespace SpecFlowNetCore.Steps
     class HomeSteps
     {
         protected TestDetails Data = JsonManager.GetTestData();
-        public HomePage homePage = new HomePage();
+        private HomePage homePage = new HomePage();
         public IWebDriver WebDriver => DriverFactory.Driver;
 
         [Given(@"I launch the application")]

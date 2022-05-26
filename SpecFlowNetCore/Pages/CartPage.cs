@@ -3,7 +3,7 @@ using SpecFlowNetCore.Driver;
 
 namespace SpecFlowNetCore.Pages
 {
-    internal class CartPage : BasePage
+    public class CartPage : BasePage
     {
         private By ProductNameInCart = By.XPath("//td/p[@class='product-name']");
 
